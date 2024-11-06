@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PII
 {
-    public partial class Form2 : Form
+    public partial class RegistroProfessores : Form
     {
-        public Form2()
+        public RegistroProfessores()
         {
             InitializeComponent();
         }
@@ -26,14 +26,32 @@ namespace PII
 
         private void button6_Click(object sender, EventArgs e)
         {
-            Form2 reg2 = new Form2();
-            reg2.ShowDialog();
+            
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
-            Form3 reg3 = new Form3();
-            reg3.ShowDialog();
+             
+        }
+
+        private void btnHam_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menu_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

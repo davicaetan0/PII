@@ -46,12 +46,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Boletim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Boletim.Designer.cs">
+      <DependentUpon>Boletim.cs</DependentUpon>
+    </Compile>
     <Compile Include="Conexao.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="popup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="popup.Designer.cs">
+      <DependentUpon>popup.cs</DependentUpon>
     </Compile>
     <Compile Include="RegistroProfessores.cs">
       <SubType>Form</SubType>
@@ -103,8 +115,14 @@
     <Compile Include="UserControl1.Designer.cs">
       <DependentUpon>UserControl1.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Boletim.resx">
+      <DependentUpon>Boletim.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="popup.resx">
+      <DependentUpon>popup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RegistroProfessores.resx">
       <DependentUpon>RegistroProfessores.cs</DependentUpon>
@@ -176,6 +194,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\definitiva.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Instagram.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LinkedIn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TwitterX.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-erro-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-erro-15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cancelar-20.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

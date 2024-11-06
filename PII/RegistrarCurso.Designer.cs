@@ -1,6 +1,6 @@
 ﻿namespace PII
 {
-    partial class Form3
+    partial class RegistrarCurso
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Button button3;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistrarCurso));
             this.UNIFENAS = new System.Windows.Forms.Label();
             this.menuContainer = new System.Windows.Forms.FlowLayoutPanel();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -46,31 +46,33 @@
             this.panel11 = new System.Windows.Forms.Panel();
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
-            this.txtData = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
             this.menuTransition = new System.Windows.Forms.Timer(this.components);
-            this.comboBoxCurso = new System.Windows.Forms.ComboBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.sideBar = new System.Windows.Forms.FlowLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnHam = new System.Windows.Forms.PictureBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtMatricula = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtNome = new System.Windows.Forms.TextBox();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtEndereco = new System.Windows.Forms.TextBox();
             this.sidebarTransition = new System.Windows.Forms.Timer(this.components);
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.E = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtNome = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtDisciplina = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnADD = new System.Windows.Forms.Button();
+            this.btnEnviar = new System.Windows.Forms.Button();
+            this.datagridCadastrados = new System.Windows.Forms.DataGridView();
+            this.btnClear = new System.Windows.Forms.Button();
             button3 = new System.Windows.Forms.Button();
             this.menuContainer.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -87,6 +89,10 @@
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnHam)).BeginInit();
             this.panel1.SuspendLayout();
+            this.panel12.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datagridCadastrados)).BeginInit();
             this.SuspendLayout();
             // 
             // button3
@@ -109,6 +115,7 @@
             // 
             this.UNIFENAS.AutoSize = true;
             this.UNIFENAS.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UNIFENAS.ForeColor = System.Drawing.Color.White;
             this.UNIFENAS.Location = new System.Drawing.Point(61, 8);
             this.UNIFENAS.Name = "UNIFENAS";
             this.UNIFENAS.Size = new System.Drawing.Size(68, 17);
@@ -292,16 +299,6 @@
             this.button9.Text = "Cursos e Disciplinas";
             this.button9.UseVisualStyleBackColor = false;
             // 
-            // txtData
-            // 
-            this.txtData.BackColor = System.Drawing.SystemColors.Menu;
-            this.txtData.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtData.Location = new System.Drawing.Point(575, 141);
-            this.txtData.Multiline = true;
-            this.txtData.Name = "txtData";
-            this.txtData.Size = new System.Drawing.Size(311, 28);
-            this.txtData.TabIndex = 68;
-            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
@@ -321,9 +318,9 @@
             // 
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.panel8.Controls.Add(this.label7);
-            this.panel8.Location = new System.Drawing.Point(154, 267);
+            this.panel8.Location = new System.Drawing.Point(156, 316);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(890, 65);
+            this.panel8.Size = new System.Drawing.Size(1285, 60);
             this.panel8.TabIndex = 74;
             // 
             // label7
@@ -331,7 +328,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(366, 17);
+            this.label7.Location = new System.Drawing.Point(537, 15);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(188, 30);
             this.label7.TabIndex = 0;
@@ -352,38 +349,21 @@
             this.button4.Text = "Boletim";
             this.button4.UseVisualStyleBackColor = false;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(571, 177);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 20);
-            this.label3.TabIndex = 71;
-            this.label3.Text = "Curso:";
-            // 
             // menuTransition
             // 
             this.menuTransition.Interval = 10;
             // 
-            // comboBoxCurso
-            // 
-            this.comboBoxCurso.BackColor = System.Drawing.SystemColors.Menu;
-            this.comboBoxCurso.FormattingEnabled = true;
-            this.comboBoxCurso.Location = new System.Drawing.Point(575, 205);
-            this.comboBoxCurso.Name = "comboBoxCurso";
-            this.comboBoxCurso.Size = new System.Drawing.Size(200, 21);
-            this.comboBoxCurso.TabIndex = 73;
-            // 
             // pictureBox2
             // 
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(1136, 4);
+            this.pictureBox2.Location = new System.Drawing.Point(1399, 4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(30, 21);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // sideBar
             // 
@@ -432,136 +412,203 @@
             this.btnHam.TabIndex = 1;
             this.btnHam.TabStop = false;
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(571, 113);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(152, 20);
-            this.label6.TabIndex = 67;
-            this.label6.Text = "Data de nascimento:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(571, 47);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(79, 20);
-            this.label5.TabIndex = 64;
-            this.label5.Text = "Matricula:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(194, 180);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 20);
-            this.label4.TabIndex = 62;
-            this.label4.Text = "E-mail:";
-            // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.UNIFENAS);
             this.panel1.Controls.Add(this.btnHam);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1044, 32);
+            this.panel1.Size = new System.Drawing.Size(1441, 32);
             this.panel1.TabIndex = 56;
-            // 
-            // txtMatricula
-            // 
-            this.txtMatricula.BackColor = System.Drawing.SystemColors.Menu;
-            this.txtMatricula.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtMatricula.Location = new System.Drawing.Point(575, 71);
-            this.txtMatricula.Multiline = true;
-            this.txtMatricula.Name = "txtMatricula";
-            this.txtMatricula.Size = new System.Drawing.Size(311, 28);
-            this.txtMatricula.TabIndex = 65;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(194, 46);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 20);
-            this.label1.TabIndex = 58;
-            this.label1.Text = "Nome:";
-            // 
-            // txtNome
-            // 
-            this.txtNome.BackColor = System.Drawing.SystemColors.Menu;
-            this.txtNome.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNome.Location = new System.Drawing.Point(198, 70);
-            this.txtNome.Multiline = true;
-            this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(311, 28);
-            this.txtNome.TabIndex = 59;
-            this.txtNome.TextChanged += new System.EventHandler(this.txtNome_TextChanged);
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.BackColor = System.Drawing.SystemColors.Menu;
-            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtEmail.Location = new System.Drawing.Point(198, 204);
-            this.txtEmail.Multiline = true;
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(311, 28);
-            this.txtEmail.TabIndex = 63;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(194, 112);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 20);
-            this.label2.TabIndex = 60;
-            this.label2.Text = "Endereco:";
-            // 
-            // txtEndereco
-            // 
-            this.txtEndereco.BackColor = System.Drawing.SystemColors.Menu;
-            this.txtEndereco.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtEndereco.Location = new System.Drawing.Point(198, 136);
-            this.txtEndereco.Multiline = true;
-            this.txtEndereco.Name = "txtEndereco";
-            this.txtEndereco.Size = new System.Drawing.Size(311, 28);
-            this.txtEndereco.TabIndex = 61;
             // 
             // sidebarTransition
             // 
             this.sidebarTransition.Interval = 10;
             // 
-            // Form3
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.panel12.Controls.Add(this.label8);
+            this.panel12.Controls.Add(this.E);
+            this.panel12.Controls.Add(this.pictureBox1);
+            this.panel12.Location = new System.Drawing.Point(1174, 32);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(154, 141);
+            this.panel12.TabIndex = 75;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(24, 111);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(111, 17);
+            this.label8.TabIndex = 1;
+            this.label8.Text = "Ensino Mackenzie";
+            // 
+            // E
+            // 
+            this.E.AutoSize = true;
+            this.E.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.E.ForeColor = System.Drawing.Color.White;
+            this.E.Location = new System.Drawing.Point(16, 81);
+            this.E.Name = "E";
+            this.E.Size = new System.Drawing.Size(118, 30);
+            this.E.TabIndex = 1;
+            this.E.Text = "UNIFENAS";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(31, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(88, 76);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label9.Location = new System.Drawing.Point(190, 40);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(120, 30);
+            this.label9.TabIndex = 76;
+            this.label9.Text = "REGISTRO:";
+            // 
+            // txtNome
+            // 
+            this.txtNome.BackColor = System.Drawing.SystemColors.Menu;
+            this.txtNome.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNome.Location = new System.Drawing.Point(195, 115);
+            this.txtNome.Multiline = true;
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(311, 28);
+            this.txtNome.TabIndex = 103;
+            this.txtNome.TextChanged += new System.EventHandler(this.txtNome_TextChanged_1);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(191, 86);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(58, 20);
+            this.label1.TabIndex = 102;
+            this.label1.Text = "NOME:";
+            // 
+            // txtDisciplina
+            // 
+            this.txtDisciplina.BackColor = System.Drawing.SystemColors.Menu;
+            this.txtDisciplina.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDisciplina.Location = new System.Drawing.Point(195, 203);
+            this.txtDisciplina.Multiline = true;
+            this.txtDisciplina.Name = "txtDisciplina";
+            this.txtDisciplina.Size = new System.Drawing.Size(311, 28);
+            this.txtDisciplina.TabIndex = 103;
+            this.txtDisciplina.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(191, 180);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(261, 20);
+            this.label2.TabIndex = 104;
+            this.label2.Text = "INSIRA AS DISCIPLINAS DO CURSO:";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Menu;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(631, 86);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(337, 185);
+            this.dataGridView1.TabIndex = 105;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // btnADD
+            // 
+            this.btnADD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnADD.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnADD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnADD.ForeColor = System.Drawing.Color.White;
+            this.btnADD.Location = new System.Drawing.Point(195, 251);
+            this.btnADD.Name = "btnADD";
+            this.btnADD.Size = new System.Drawing.Size(106, 23);
+            this.btnADD.TabIndex = 106;
+            this.btnADD.Text = "ADD";
+            this.btnADD.UseVisualStyleBackColor = false;
+            this.btnADD.Click += new System.EventHandler(this.btnADD_Click);
+            // 
+            // btnEnviar
+            // 
+            this.btnEnviar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnEnviar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEnviar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEnviar.ForeColor = System.Drawing.Color.White;
+            this.btnEnviar.Location = new System.Drawing.Point(660, 277);
+            this.btnEnviar.Name = "btnEnviar";
+            this.btnEnviar.Size = new System.Drawing.Size(106, 23);
+            this.btnEnviar.TabIndex = 106;
+            this.btnEnviar.Text = "ENVIAR";
+            this.btnEnviar.UseVisualStyleBackColor = false;
+            this.btnEnviar.Click += new System.EventHandler(this.btnEnviar_Click);
+            // 
+            // datagridCadastrados
+            // 
+            this.datagridCadastrados.BackgroundColor = System.Drawing.Color.White;
+            this.datagridCadastrados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.datagridCadastrados.GridColor = System.Drawing.Color.DarkGray;
+            this.datagridCadastrados.Location = new System.Drawing.Point(156, 376);
+            this.datagridCadastrados.Name = "datagridCadastrados";
+            this.datagridCadastrados.Size = new System.Drawing.Size(1285, 315);
+            this.datagridCadastrados.TabIndex = 107;
+            this.datagridCadastrados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagridCadastrados_CellContentClick);
+            // 
+            // btnClear
+            // 
+            this.btnClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnClear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClear.ForeColor = System.Drawing.Color.White;
+            this.btnClear.Location = new System.Drawing.Point(796, 277);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(106, 23);
+            this.btnClear.TabIndex = 106;
+            this.btnClear.Text = "LIMPAR";
+            this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
+            // RegistrarCurso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1044, 680);
-            this.Controls.Add(this.txtData);
-            this.Controls.Add(this.panel8);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.comboBoxCurso);
-            this.Controls.Add(this.sideBar);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.txtMatricula);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtNome);
-            this.Controls.Add(this.txtEmail);
+            this.ClientSize = new System.Drawing.Size(1441, 680);
+            this.Controls.Add(this.datagridCadastrados);
+            this.Controls.Add(this.btnClear);
+            this.Controls.Add(this.btnEnviar);
+            this.Controls.Add(this.btnADD);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.panel12);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtEndereco);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtDisciplina);
+            this.Controls.Add(this.txtNome);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.panel8);
+            this.Controls.Add(this.sideBar);
+            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form3";
+            this.Name = "RegistrarCurso";
             this.Text = "Form3";
             this.menuContainer.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
@@ -581,6 +628,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnHam)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel12.ResumeLayout(false);
+            this.panel12.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datagridCadastrados)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -603,30 +655,32 @@
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.TextBox txtData;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Timer menuTransition;
-        private System.Windows.Forms.ComboBox comboBoxCurso;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.FlowLayoutPanel sideBar;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.PictureBox btnHam;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox txtMatricula;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtNome;
-        private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtEndereco;
         private System.Windows.Forms.Timer sidebarTransition;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label E;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txtNome;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtDisciplina;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btnADD;
+        private System.Windows.Forms.Button btnEnviar;
+        private System.Windows.Forms.DataGridView datagridCadastrados;
+        private System.Windows.Forms.Button btnClear;
     }
 }

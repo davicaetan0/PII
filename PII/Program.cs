@@ -16,7 +16,7 @@ namespace PII
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new HomeAluno());
+            Application.Run(new Solicitar_aulas());
         }
     }
 }

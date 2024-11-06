@@ -103,9 +103,59 @@ namespace PII.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_cancelar_20 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-cancelar-20", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_erro_15 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-erro-15", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_erro_25 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-erro-25", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap imagem_2024_10_27_222945501 {
             get {
                 object obj = ResourceManager.GetObject("imagem_2024-10-27_222945501", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Instagram {
+            get {
+                object obj = ResourceManager.GetObject("Instagram", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap LinkedIn {
+            get {
+                object obj = ResourceManager.GetObject("LinkedIn", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -126,6 +176,16 @@ namespace PII.Properties {
         internal static System.Drawing.Bitmap Smaller_Network_Connection_Background___ganesh_ganesh__720p__h264__youtube_ {
             get {
                 object obj = ResourceManager.GetObject("Smaller Network Connection Background - ganesh ganesh (720p, h264, youtube)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TwitterX {
+            get {
+                object obj = ResourceManager.GetObject("TwitterX", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
