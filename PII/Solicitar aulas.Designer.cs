@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Solicitar_aulas));
             System.Windows.Forms.Button button3;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Solicitar_aulas));
             System.Windows.Forms.Button button2;
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.sideBar = new System.Windows.Forms.FlowLayoutPanel();
@@ -51,19 +51,30 @@
             this.button4 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.btnHam = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.menuTransition = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.UNIFENAS = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.sidebarTransition = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridAlunos = new System.Windows.Forms.DataGridView();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.E = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
             button3 = new System.Windows.Forms.Button();
             button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -80,8 +91,42 @@
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnHam)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridAlunos)).BeginInit();
+            this.panel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // button3
+            // 
+            button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
+            button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            button3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            button3.ForeColor = System.Drawing.Color.White;
+            button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            button3.Location = new System.Drawing.Point(-23, -10);
+            button3.Name = "button3";
+            button3.Padding = new System.Windows.Forms.Padding(20, 0, 105, 0);
+            button3.Size = new System.Drawing.Size(235, 68);
+            button3.TabIndex = 3;
+            button3.Text = "Sair";
+            button3.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
+            button2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            button2.ForeColor = System.Drawing.Color.White;
+            button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            button2.Location = new System.Drawing.Point(-23, -10);
+            button2.Name = "button2";
+            button2.Padding = new System.Windows.Forms.Padding(25, 0, 46, 0);
+            button2.Size = new System.Drawing.Size(235, 68);
+            button2.TabIndex = 3;
+            button2.Text = "Aula de Reforco";
+            button2.UseVisualStyleBackColor = false;
             // 
             // pictureBox2
             // 
@@ -102,7 +147,7 @@
             this.sideBar.Controls.Add(this.panel3);
             this.sideBar.Location = new System.Drawing.Point(-1, 30);
             this.sideBar.Name = "sideBar";
-            this.sideBar.Size = new System.Drawing.Size(44, 541);
+            this.sideBar.Size = new System.Drawing.Size(38, 541);
             this.sideBar.TabIndex = 27;
             // 
             // menuContainer
@@ -301,22 +346,6 @@
             this.panel4.Size = new System.Drawing.Size(163, 44);
             this.panel4.TabIndex = 2;
             // 
-            // button3
-            // 
-            button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
-            button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            button3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            button3.ForeColor = System.Drawing.Color.White;
-            button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            button3.Location = new System.Drawing.Point(-23, -10);
-            button3.Name = "button3";
-            button3.Padding = new System.Windows.Forms.Padding(20, 0, 105, 0);
-            button3.Size = new System.Drawing.Size(235, 68);
-            button3.TabIndex = 3;
-            button3.Text = "Sair";
-            button3.UseVisualStyleBackColor = false;
-            // 
             // panel3
             // 
             this.panel3.Controls.Add(button2);
@@ -324,51 +353,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(203, 44);
             this.panel3.TabIndex = 6;
-            // 
-            // button2
-            // 
-            button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
-            button2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            button2.ForeColor = System.Drawing.Color.White;
-            button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            button2.Location = new System.Drawing.Point(-23, -10);
-            button2.Name = "button2";
-            button2.Padding = new System.Windows.Forms.Padding(25, 0, 46, 0);
-            button2.Size = new System.Drawing.Size(235, 68);
-            button2.TabIndex = 3;
-            button2.Text = "Aula de Reforco";
-            button2.UseVisualStyleBackColor = false;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(265, 439);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(79, 20);
-            this.label5.TabIndex = 34;
-            this.label5.Text = "Matricula:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(543, 357);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(139, 20);
-            this.label6.TabIndex = 35;
-            this.label6.Text = "Anexar Evidencias:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(265, 357);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(138, 20);
-            this.label4.TabIndex = 33;
-            this.label4.Text = "Data do Feedback:";
             // 
             // btnHam
             // 
@@ -379,16 +363,7 @@
             this.btnHam.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.btnHam.TabIndex = 1;
             this.btnHam.TabStop = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(69, 357);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(135, 20);
-            this.label2.TabIndex = 32;
-            this.label2.Text = "Tipo de Feedback:";
+            this.btnHam.Click += new System.EventHandler(this.btnHam_Click);
             // 
             // menuTransition
             // 
@@ -397,12 +372,36 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.panel1.Controls.Add(this.UNIFENAS);
+            this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.btnHam);
             this.panel1.Location = new System.Drawing.Point(-2, -1);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(963, 32);
             this.panel1.TabIndex = 26;
+            // 
+            // UNIFENAS
+            // 
+            this.UNIFENAS.AutoSize = true;
+            this.UNIFENAS.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UNIFENAS.ForeColor = System.Drawing.Color.White;
+            this.UNIFENAS.Location = new System.Drawing.Point(53, 8);
+            this.UNIFENAS.Name = "UNIFENAS";
+            this.UNIFENAS.Size = new System.Drawing.Size(68, 17);
+            this.UNIFENAS.TabIndex = 67;
+            this.UNIFENAS.Text = "UNIFENAS";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(917, 4);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(30, 21);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox3.TabIndex = 67;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // sidebarTransition
             // 
@@ -413,7 +412,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(59, 51);
+            this.label1.Location = new System.Drawing.Point(59, 38);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(362, 30);
             this.label1.TabIndex = 30;
@@ -423,16 +422,16 @@
             // 
             this.dataGridAlunos.BackgroundColor = System.Drawing.Color.White;
             this.dataGridAlunos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridAlunos.Location = new System.Drawing.Point(43, 234);
+            this.dataGridAlunos.Location = new System.Drawing.Point(37, 321);
             this.dataGridAlunos.Name = "dataGridAlunos";
-            this.dataGridAlunos.Size = new System.Drawing.Size(918, 332);
+            this.dataGridAlunos.Size = new System.Drawing.Size(919, 241);
             this.dataGridAlunos.TabIndex = 36;
             // 
             // txtNome
             // 
             this.txtNome.BackColor = System.Drawing.SystemColors.Menu;
             this.txtNome.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNome.Location = new System.Drawing.Point(64, 131);
+            this.txtNome.Location = new System.Drawing.Point(54, 131);
             this.txtNome.Multiline = true;
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(181, 28);
@@ -441,7 +440,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(73, 102);
+            this.label3.Location = new System.Drawing.Point(63, 102);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(35, 13);
             this.label3.TabIndex = 62;
@@ -451,27 +450,165 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(60, 102);
+            this.label7.Location = new System.Drawing.Point(50, 95);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(100, 20);
             this.label7.TabIndex = 63;
-            this.label7.Text = "MATRICULA:";
+            this.label7.Text = "MATRÍCULA:";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.BackColor = System.Drawing.SystemColors.Menu;
+            this.comboBox1.ForeColor = System.Drawing.Color.Black;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(54, 212);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(181, 21);
+            this.comboBox1.TabIndex = 64;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(50, 175);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(176, 20);
+            this.label8.TabIndex = 63;
+            this.label8.Text = "SELECIONE A MATÉRIA:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(535, 95);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(0, 20);
+            this.label10.TabIndex = 63;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(514, 88);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(220, 20);
+            this.label9.TabIndex = 63;
+            this.label9.Text = "SELECIONE A DATA DA AULA:";
+            // 
+            // monthCalendar1
+            // 
+            this.monthCalendar1.Location = new System.Drawing.Point(518, 118);
+            this.monthCalendar1.Name = "monthCalendar1";
+            this.monthCalendar1.TabIndex = 65;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.panel8.Controls.Add(this.label2);
+            this.panel8.Controls.Add(this.E);
+            this.panel8.Controls.Add(this.pictureBox1);
+            this.panel8.Location = new System.Drawing.Point(771, 30);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(154, 141);
+            this.panel8.TabIndex = 66;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(24, 111);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(111, 17);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Ensino Mackenzie";
+            // 
+            // E
+            // 
+            this.E.AutoSize = true;
+            this.E.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.E.ForeColor = System.Drawing.Color.White;
+            this.E.Location = new System.Drawing.Point(16, 81);
+            this.E.Name = "E";
+            this.E.Size = new System.Drawing.Size(118, 30);
+            this.E.TabIndex = 1;
+            this.E.Text = "UNIFENAS";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(31, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(88, 76);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(266, 97);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(184, 20);
+            this.label4.TabIndex = 63;
+            this.label4.Text = "DESCREVA SUA DUVIDA:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.SystemColors.Menu;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Location = new System.Drawing.Point(270, 131);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(211, 115);
+            this.textBox1.TabIndex = 61;
+            // 
+            // button10
+            // 
+            this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.ForeColor = System.Drawing.Color.White;
+            this.button10.Location = new System.Drawing.Point(518, 286);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(110, 29);
+            this.button10.TabIndex = 68;
+            this.button10.Text = "FINALIZAR";
+            this.button10.UseVisualStyleBackColor = false;
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.ForeColor = System.Drawing.Color.White;
+            this.button7.Location = new System.Drawing.Point(634, 286);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(111, 29);
+            this.button7.TabIndex = 68;
+            this.button7.Text = "LIMPAR";
+            this.button7.UseVisualStyleBackColor = false;
             // 
             // Solicitar_aulas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(961, 567);
+            this.ClientSize = new System.Drawing.Size(957, 567);
+            this.Controls.Add(this.button7);
+            this.Controls.Add(this.button10);
+            this.Controls.Add(this.panel8);
+            this.Controls.Add(this.monthCalendar1);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label3);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.dataGridAlunos);
             this.Controls.Add(this.sideBar);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.Color.Black;
@@ -492,7 +629,12 @@
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnHam)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridAlunos)).EndInit();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -519,11 +661,7 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox btnHam;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Timer menuTransition;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Timer sidebarTransition;
@@ -532,5 +670,20 @@
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.MonthCalendar monthCalendar1;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label E;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label UNIFENAS;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button button7;
     }
 }

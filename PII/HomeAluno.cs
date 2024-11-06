@@ -21,5 +21,60 @@ namespace PII
         {
 
         }
+
+        private void btnHam_Click(object sender, EventArgs e)
+        {
+            sidebarTransition.Start();
+        }
+
+        bool sidebarExpand = true;
+        private void sidebarTransition_Tick(object sender, EventArgs e)
+        {
+            if (sidebarExpand)
+            {
+                sideBar.Width -= 5;
+                if (sideBar.Width <= 43)
+                {
+                    sidebarExpand = false;
+                    sidebarTransition.Stop();
+                }
+            }
+            else
+            {
+                sideBar.Width += 5;
+                if (sideBar.Width >= 209)
+                {
+                    sidebarExpand = true;
+                    sidebarTransition.Stop();
+                }
+            }
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void menu_Click(object sender, EventArgs e)
+        {
+            Ouvidoria open1 = new Ouvidoria();
+            open1.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Solicitar_aulas open2 = new Solicitar_aulas();
+            open2.ShowDialog();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close(); 
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PII
 {
-    public partial class Form3 : Form
+    public partial class RegistrarCurso : Form
     {
-        public Form3()
+        public RegistrarCurso()
         {
             InitializeComponent();
         }
@@ -20,6 +20,11 @@ namespace PII
         private void txtNome_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

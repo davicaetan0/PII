@@ -97,6 +97,7 @@
             // button3
             // 
             button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
+            button3.Cursor = System.Windows.Forms.Cursors.Hand;
             button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             button3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             button3.ForeColor = System.Drawing.Color.White;
@@ -113,6 +114,7 @@
             // button2
             // 
             button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
+            button2.Cursor = System.Windows.Forms.Cursors.Hand;
             button2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             button2.ForeColor = System.Drawing.Color.White;
             button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
@@ -124,10 +126,12 @@
             button2.TabIndex = 3;
             button2.Text = "Aula de Reforco";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // sidebarTransition
             // 
             this.sidebarTransition.Interval = 10;
+            this.sidebarTransition.Tick += new System.EventHandler(this.sidebarTransition_Tick);
             // 
             // panel4
             // 
@@ -140,6 +144,7 @@
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
+            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
@@ -212,6 +217,7 @@
             // menu
             // 
             this.menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
+            this.menu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.menu.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menu.ForeColor = System.Drawing.Color.White;
             this.menu.Image = ((System.Drawing.Image)(resources.GetObject("menu.Image")));
@@ -224,6 +230,7 @@
             this.menu.TabIndex = 4;
             this.menu.Text = "Ouvidoria";
             this.menu.UseVisualStyleBackColor = false;
+            this.menu.Click += new System.EventHandler(this.menu_Click);
             // 
             // button6
             // 
@@ -335,7 +342,7 @@
             this.sideBar.Dock = System.Windows.Forms.DockStyle.Left;
             this.sideBar.Location = new System.Drawing.Point(0, 32);
             this.sideBar.Name = "sideBar";
-            this.sideBar.Size = new System.Drawing.Size(39, 531);
+            this.sideBar.Size = new System.Drawing.Size(42, 531);
             this.sideBar.TabIndex = 3;
             // 
             // panel3
@@ -355,6 +362,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // btnHam
             // 
@@ -365,6 +373,7 @@
             this.btnHam.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.btnHam.TabIndex = 1;
             this.btnHam.TabStop = false;
+            this.btnHam.Click += new System.EventHandler(this.btnHam_Click);
             // 
             // panel1
             // 
@@ -376,6 +385,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(992, 32);
             this.panel1.TabIndex = 2;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // menuTransition
             // 
@@ -562,11 +572,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(992, 563);
-            this.Controls.Add(this.button7);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.sideBar);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel8);
+            this.Controls.Add(this.button7);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label6);
@@ -575,9 +588,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.panel8);
-            this.Controls.Add(this.sideBar);
-            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "HomeAluno";
             this.Text = "HomeAluno";

@@ -97,12 +97,25 @@ namespace PII
 
         private void button6_Click(object sender, EventArgs e)
         {
-            
+            RegistroProfessores ope = new RegistroProfessores();
+            ope.ShowDialog();
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
+            RegistrarCurso opne2 = new RegistrarCurso();
+            opne2.ShowDialog();
           
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

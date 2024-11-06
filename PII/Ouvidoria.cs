@@ -16,5 +16,20 @@ namespace PII
         {
             InitializeComponent();
         }
+
+        private void Ouvidoria_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menu_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

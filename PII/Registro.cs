@@ -369,8 +369,7 @@ namespace PII
 
         private void button9_Click(object sender, EventArgs e)
         {
-            Form3 reg3 = new Form3();
-            reg3.ShowDialog();
+            
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -389,16 +388,10 @@ namespace PII
             reg.ShowDialog();
         }
 
-        private void button6_Click(object sender, EventArgs e)
-        {
-
-            RegistroProfessores reg2 = new RegistroProfessores();
-            reg2.ShowDialog();
-        }
-
+ 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
