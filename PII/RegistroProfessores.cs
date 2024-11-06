@@ -24,16 +24,5 @@ namespace PII
 
         }
 
-        private void button6_Click(object sender, EventArgs e)
-        {
-            Form2 reg2 = new Form2();
-            reg2.ShowDialog();
-        }
-
-        private void button9_Click(object sender, EventArgs e)
-        {
-            Form3 reg3 = new Form3();
-            reg3.ShowDialog();
-        }
     }
 }

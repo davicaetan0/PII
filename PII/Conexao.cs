@@ -17,8 +17,8 @@ namespace PII
 
             public void Conectar()
             {
-                string aux = "SERVER=.\\SQLEXPRESS;Database=Teste;UID=sa;PWD=123";
-                conn.ConnectionString = aux;
+            string aux = "Server=.\\SQLEXPRESS;Database=Teste;Integrated Security=True;";
+            conn.ConnectionString = aux;
                 conn.Open();
             }
 
@@ -46,9 +46,8 @@ namespace PII
 
         public void InserirRegistro(string nome, DateTime dataNascimento, int idCurso, string endereco, string email, string matricula)
         {
-            // SQL para inserir os dados na tabela Alunos
             string sql = "INSERT INTO Aluno (nomeAluno, dataNascimento, idCurso, endereco, email, matricula) " +
-                         "VALUES (@nome, @dataNascimento, @idCurso, @endereco, @email, @matricula)";
+               "VALUES (@nome, @dataNascimento, @idCurso, @endereco, @email, @matricula)";
 
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {

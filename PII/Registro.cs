@@ -392,8 +392,6 @@ namespace PII
         private void button6_Click(object sender, EventArgs e)
         {
 
-            RegistroProfessores reg2 = new RegistroProfessores();
-            reg2.ShowDialog();
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)

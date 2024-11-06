@@ -243,7 +243,7 @@
             this.button6.TabIndex = 3;
             this.button6.Text = "Professor";
             this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+
             // 
             // panel10
             // 
@@ -295,7 +295,7 @@
             this.button9.TabIndex = 3;
             this.button9.Text = "Cursos e Disciplinas";
             this.button9.UseVisualStyleBackColor = false;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
+
             // 
             // sideBar
             // 
