@@ -47,9 +47,9 @@
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.sideBar = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.sidebarTransition = new System.Windows.Forms.Timer(this.components);
             this.menuTransition = new System.Windows.Forms.Timer(this.components);
             this.label3 = new System.Windows.Forms.Label();
@@ -74,6 +74,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             button3 = new System.Windows.Forms.Button();
             this.menuContainer.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -83,8 +84,8 @@
             this.panel10.SuspendLayout();
             this.panel11.SuspendLayout();
             this.sideBar.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnHam)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -243,7 +244,6 @@
             this.button6.TabIndex = 3;
             this.button6.Text = "Professor";
             this.button6.UseVisualStyleBackColor = false;
-
             // 
             // panel10
             // 
@@ -295,7 +295,6 @@
             this.button9.TabIndex = 3;
             this.button9.Text = "Cursos e Disciplinas";
             this.button9.UseVisualStyleBackColor = false;
-
             // 
             // sideBar
             // 
@@ -308,14 +307,6 @@
             this.sideBar.Name = "sideBar";
             this.sideBar.Size = new System.Drawing.Size(156, 642);
             this.sideBar.TabIndex = 36;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(button3);
-            this.panel4.Location = new System.Drawing.Point(3, 98);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(163, 44);
-            this.panel4.TabIndex = 2;
             // 
             // panel5
             // 
@@ -339,6 +330,14 @@
             this.button4.TabIndex = 3;
             this.button4.Text = "Boletim";
             this.button4.UseVisualStyleBackColor = false;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(button3);
+            this.panel4.Location = new System.Drawing.Point(3, 98);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(163, 44);
+            this.panel4.TabIndex = 2;
             // 
             // sidebarTransition
             // 
@@ -434,14 +433,14 @@
             this.txtNome.Location = new System.Drawing.Point(182, 121);
             this.txtNome.Multiline = true;
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(311, 28);
+            this.txtNome.Size = new System.Drawing.Size(294, 30);
             this.txtNome.TabIndex = 38;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(482, 118);
+            this.label5.Location = new System.Drawing.Point(555, 93);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(78, 20);
             this.label5.TabIndex = 43;
@@ -461,7 +460,7 @@
             // 
             this.txtMatricula.BackColor = System.Drawing.SystemColors.Menu;
             this.txtMatricula.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtMatricula.Location = new System.Drawing.Point(559, 122);
+            this.txtMatricula.Location = new System.Drawing.Point(560, 122);
             this.txtMatricula.Multiline = true;
             this.txtMatricula.Name = "txtMatricula";
             this.txtMatricula.Size = new System.Drawing.Size(311, 28);
@@ -570,12 +569,26 @@
             this.label10.TabIndex = 57;
             this.label10.Text = "CPF:";
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(930, 242);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(129, 22);
+            this.button2.TabIndex = 24;
+            this.button2.Text = "REGISTRAR";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1332, 674);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.textBox2);
@@ -608,8 +621,8 @@
             this.panel10.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
             this.sideBar.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnHam)).EndInit();
@@ -666,5 +679,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button button2;
     }
 }

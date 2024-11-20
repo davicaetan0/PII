@@ -24,5 +24,27 @@ namespace PII
 
         }
 
+        private async void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string uri = "bolt://ba3ed93c.databases.neo4j.io:7687";
+                string user = "neo4j";
+                string password = "9pZkRYX23ksULG-D7jRCPeeVtyvft2fGIsfmKVYAbjQ";
+
+                using (var conexao = new ConexaoNeo4j(uri, user, password))
+                {
+                    await conexao.PrintGreetingAsync("Olá, Neo4j!");
+                    MessageBox.Show("Mensagem enviada e nó criado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erro: {ex.Message}", "Erro de Conexão", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
+
     }
 }
