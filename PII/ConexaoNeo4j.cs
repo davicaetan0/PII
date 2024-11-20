@@ -16,6 +16,38 @@ namespace PII
             _driver = GraphDatabase.Driver(uri, AuthTokens.Basic(user, password));
         }
 
+        public async Task RegistrarProfessorAsync(string nome, string endereco, string email, string formacao, string matricula, string dataNascimento, string cpf, string registroGeral)
+        {
+            await using var session = _driver.AsyncSession();
+            await session.ExecuteWriteAsync(
+                async tx =>
+                {
+                    var query = @"
+                        CREATE (p:Professor {
+                            Nome: $nome,
+                            Endereco: $endereco,
+                            Email: $email,
+                            Formacao: $formacao,
+                            Matricula: $matricula,
+                            DataNascimento: $dataNascimento,
+                            CPF: $cpf,
+                            RegistroGeral: $registroGeral
+                        })
+                        RETURN p";
+                    await tx.RunAsync(query, new
+                    {
+                        nome,
+                        endereco,
+                        email,
+                        formacao,
+                        matricula,
+                        dataNascimento,
+                        cpf,
+                        registroGeral
+                    });
+                });
+        }
+
         public async Task PrintGreetingAsync(string message)
         {
             await using var session = _driver.AsyncSession();

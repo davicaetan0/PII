@@ -26,23 +26,34 @@ namespace PII
 
         private async void button2_Click(object sender, EventArgs e)
         {
-            try
-            {
-                string uri = "bolt://ba3ed93c.databases.neo4j.io:7687";
-                string user = "neo4j";
-                string password = "9pZkRYX23ksULG-D7jRCPeeVtyvft2fGIsfmKVYAbjQ";
+            // Captura os valores do formulário
+            string nome = txtNome.Text;
+            string endereco = txtEndereco.Text;
+            string email = txtEmail.Text;
+            string curso = comboBoxCurso.SelectedItem?.ToString() ?? "";
+            string matricula = txtMatricula.Text;
+            string dataNascimento = txtData.Text; // Certifique-se de que este é o formato desejado
+            string cpf = textBox2.Text;
+            string registroGeral = textBox1.Text;
 
-                using (var conexao = new ConexaoNeo4j(uri, user, password))
+            string uri = "neo4j+s://e1c2015f.databases.neo4j.io:7687";
+            string user = "neo4j";
+            string password = "9pZkRYX23ksULG-D7jRCPeeVtyvft2fGIsfmKVYAbjQ";
+
+            // Cria uma conexão com o Neo4j
+            using (var conexao = new ConexaoNeo4j(uri, user, password))
+            {
+                try
                 {
-                    await conexao.PrintGreetingAsync("Olá, Neo4j!");
-                    MessageBox.Show("Mensagem enviada e nó criado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    // Chama o método para inserir os dados
+                    await conexao.RegistrarProfessorAsync(nome, endereco, email, curso, matricula, dataNascimento, cpf, registroGeral);
+                    MessageBox.Show("Professor registrado com sucesso!", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Erro ao registrar professor: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Erro: {ex.Message}", "Erro de Conexão", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
         }
 
 

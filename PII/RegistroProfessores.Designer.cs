@@ -361,6 +361,9 @@
             // 
             this.comboBoxCurso.BackColor = System.Drawing.SystemColors.Menu;
             this.comboBoxCurso.FormattingEnabled = true;
+            this.comboBoxCurso.Items.AddRange(new object[] {
+            "Geografia",
+            "Matematica"});
             this.comboBoxCurso.Location = new System.Drawing.Point(559, 256);
             this.comboBoxCurso.Name = "comboBoxCurso";
             this.comboBoxCurso.Size = new System.Drawing.Size(200, 21);
