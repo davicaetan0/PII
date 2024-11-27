@@ -33,7 +33,7 @@ namespace PII
                                   radioButton2.Checked ? "Negativo" :
                                   radioButton3.Checked ? "Sugestão" : "";
 
-            string dataSelecionada = comboBox1.Text;
+            string dataSelecionada = TextData.Text;
             string matricula = textBox2.Text;
             string descricao = textBox1.Text;
 
@@ -54,7 +54,7 @@ namespace PII
                 MessageBox.Show("Feedback enviado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 // Limpar os campos após o envio
-                comboBox1.SelectedIndex = -1;
+                TextData.Clear();
                 textBox2.Clear();
                 textBox1.Clear();
                 radioButton1.Checked = false;
@@ -64,6 +64,46 @@ namespace PII
             catch (Exception ex)
             {
                 MessageBox.Show($"Erro ao enviar feedback: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private async  void Alterar_Click(object sender, EventArgs e)
+        {
+            string tipoFeedback = radioButton1.Checked ? "Positivo" :
+                         radioButton2.Checked ? "Negativo" :
+                         radioButton3.Checked ? "Sugestão" : "";
+
+            string dataSelecionada = TextData.Text;
+            string matricula = textBox2.Text;
+            string descricao = textBox1.Text;
+
+            // Validação dos campos
+            if (string.IsNullOrWhiteSpace(tipoFeedback) ||
+                string.IsNullOrWhiteSpace(dataSelecionada) ||
+                string.IsNullOrWhiteSpace(matricula) ||
+                string.IsNullOrWhiteSpace(descricao))
+            {
+                MessageBox.Show("Por favor, preencha todos os campos.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            try
+            {
+                // Atualiza os dados do nó existente no banco Neo4j
+                await _conexaoNeo4j.AtualizarFeedbackAsync(tipoFeedback, dataSelecionada, matricula, descricao);
+                MessageBox.Show("Feedback atualizado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                // Limpa os campos
+                TextData.Clear();
+                textBox2.Clear();
+                textBox1.Clear();
+                radioButton1.Checked = false;
+                radioButton2.Checked = false;
+                radioButton3.Checked = false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erro ao atualizar feedback: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

@@ -91,6 +91,91 @@ namespace PII
                 });
         }
 
+        public async Task AtualizarFeedbackAsync(string tipoFeedback, string data, string matricula, string descricao)
+        {
+            await using var session = _driver.AsyncSession();
+            await session.ExecuteWriteAsync(async tx =>
+            {
+                var query = @"
+            MATCH (f:Feedback {Matricula: $matricula})
+            SET f.Tipo = $tipoFeedback,
+                f.Data = $data,
+                f.Descricao = $descricao
+            RETURN f";
+                await tx.RunAsync(query, new
+                {
+                    tipoFeedback,
+                    data,
+                    matricula,
+                    descricao
+                });
+            });
+        }
+
+
+        public async Task AtualizarProfessorAsync(string matricula, string nome, string endereco, string email, string curso, string dataNascimento, string cpf, string registroGeral)
+        {
+            await using var session = _driver.AsyncSession();
+            await session.ExecuteWriteAsync(async tx =>
+            {
+                var query = @"
+            MATCH (p:Professor {CPF: $cpf})
+            SET p.Nome = $nome,
+                p.Endereco = $endereco,
+                p.Email = $email,
+                p.Formacao = $curso,
+                p.DataNascimento = $dataNascimento,
+                p.CPF = $cpf,
+                p.RegistroGeral = $registroGeral
+            RETURN p";
+                await tx.RunAsync(query, new
+                {
+                    matricula,
+                    nome,
+                    endereco,
+                    email,
+                    curso,
+                    dataNascimento,
+                    cpf,
+                    registroGeral
+                });
+            });
+        }
+        public async Task<Dictionary<string, string>> BuscarProfessorPorCpfAsync(string cpf)
+        {
+            await using var session = _driver.AsyncSession();
+            return await session.ExecuteReadAsync(async tx =>
+            {
+                var query = @"
+            MATCH (p:Professor {CPF: $cpf})
+            RETURN p.Nome AS Nome, 
+                   p.Endereco AS Endereco, 
+                   p.Email AS Email, 
+                   p.Formacao AS Formacao, 
+                   p.DataNascimento AS DataNascimento, 
+                   p.CPF AS CPF, 
+                   p.RegistroGeral AS RegistroGeral";
+                var result = await tx.RunAsync(query, new { cpf });
+
+                if (await result.FetchAsync())
+                {
+                    var record = result.Current;
+                    return new Dictionary<string, string>
+                    {
+                        ["Nome"] = record["Nome"].As<string>(),
+                        ["Endereco"] = record["Endereco"].As<string>(),
+                        ["Email"] = record["Email"].As<string>(),
+                        ["Formacao"] = record["Formacao"].As<string>(),
+                        ["DataNascimento"] = record["DataNascimento"].As<string>(),
+                        ["CPF"] = record["CPF"].As<string>(),
+                        ["RegistroGeral"] = record["RegistroGeral"].As<string>()
+                    };
+                }
+
+                return null; // Retorna null se o professor não for encontrado
+            });
+        }
+
 
         public void Dispose()
         {

@@ -63,7 +63,7 @@
             this.txtNome = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtMatricula = new System.Windows.Forms.TextBox();
+            this.txtFormacao = new System.Windows.Forms.TextBox();
             this.btnHam = new System.Windows.Forms.PictureBox();
             this.UNIFENAS = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -75,6 +75,8 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
             button3 = new System.Windows.Forms.Button();
             this.menuContainer.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -112,10 +114,10 @@
             // 
             this.txtData.BackColor = System.Drawing.SystemColors.Menu;
             this.txtData.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtData.Location = new System.Drawing.Point(559, 192);
+            this.txtData.Location = new System.Drawing.Point(589, 184);
             this.txtData.Multiline = true;
             this.txtData.Name = "txtData";
-            this.txtData.Size = new System.Drawing.Size(311, 28);
+            this.txtData.Size = new System.Drawing.Size(292, 28);
             this.txtData.TabIndex = 47;
             // 
             // menuContainer
@@ -351,7 +353,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(555, 228);
+            this.label3.Location = new System.Drawing.Point(585, 234);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(53, 20);
             this.label3.TabIndex = 50;
@@ -364,9 +366,9 @@
             this.comboBoxCurso.Items.AddRange(new object[] {
             "Geografia",
             "Matematica"});
-            this.comboBoxCurso.Location = new System.Drawing.Point(559, 256);
+            this.comboBoxCurso.Location = new System.Drawing.Point(589, 262);
             this.comboBoxCurso.Name = "comboBoxCurso";
-            this.comboBoxCurso.Size = new System.Drawing.Size(200, 21);
+            this.comboBoxCurso.Size = new System.Drawing.Size(148, 21);
             this.comboBoxCurso.TabIndex = 52;
             // 
             // label7
@@ -393,10 +395,10 @@
             // 
             this.txtEndereco.BackColor = System.Drawing.SystemColors.Menu;
             this.txtEndereco.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtEndereco.Location = new System.Drawing.Point(182, 187);
+            this.txtEndereco.Location = new System.Drawing.Point(182, 184);
             this.txtEndereco.Multiline = true;
             this.txtEndereco.Name = "txtEndereco";
-            this.txtEndereco.Size = new System.Drawing.Size(311, 28);
+            this.txtEndereco.Size = new System.Drawing.Size(265, 28);
             this.txtEndereco.TabIndex = 40;
             // 
             // label4
@@ -413,7 +415,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(178, 163);
+            this.label2.Location = new System.Drawing.Point(178, 151);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(77, 20);
             this.label2.TabIndex = 39;
@@ -426,24 +428,24 @@
             this.txtEmail.Location = new System.Drawing.Point(182, 255);
             this.txtEmail.Multiline = true;
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(311, 28);
+            this.txtEmail.Size = new System.Drawing.Size(265, 28);
             this.txtEmail.TabIndex = 42;
             // 
             // txtNome
             // 
             this.txtNome.BackColor = System.Drawing.SystemColors.Menu;
             this.txtNome.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNome.Location = new System.Drawing.Point(182, 121);
+            this.txtNome.Location = new System.Drawing.Point(182, 110);
             this.txtNome.Multiline = true;
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(294, 30);
+            this.txtNome.Size = new System.Drawing.Size(265, 30);
             this.txtNome.TabIndex = 38;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(555, 93);
+            this.label5.Location = new System.Drawing.Point(585, 80);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(78, 20);
             this.label5.TabIndex = 43;
@@ -453,21 +455,21 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(178, 97);
+            this.label1.Location = new System.Drawing.Point(178, 80);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(56, 20);
             this.label1.TabIndex = 37;
             this.label1.Text = "Nome:";
             // 
-            // txtMatricula
+            // txtFormacao
             // 
-            this.txtMatricula.BackColor = System.Drawing.SystemColors.Menu;
-            this.txtMatricula.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtMatricula.Location = new System.Drawing.Point(560, 122);
-            this.txtMatricula.Multiline = true;
-            this.txtMatricula.Name = "txtMatricula";
-            this.txtMatricula.Size = new System.Drawing.Size(311, 28);
-            this.txtMatricula.TabIndex = 44;
+            this.txtFormacao.BackColor = System.Drawing.SystemColors.Menu;
+            this.txtFormacao.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtFormacao.Location = new System.Drawing.Point(590, 110);
+            this.txtFormacao.Multiline = true;
+            this.txtFormacao.Name = "txtFormacao";
+            this.txtFormacao.Size = new System.Drawing.Size(291, 28);
+            this.txtFormacao.TabIndex = 44;
             // 
             // btnHam
             // 
@@ -515,7 +517,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(555, 164);
+            this.label6.Location = new System.Drawing.Point(585, 151);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(152, 20);
             this.label6.TabIndex = 46;
@@ -536,17 +538,17 @@
             // 
             this.textBox1.BackColor = System.Drawing.SystemColors.Menu;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Location = new System.Drawing.Point(930, 192);
+            this.textBox1.Location = new System.Drawing.Point(1038, 194);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(311, 28);
+            this.textBox1.Size = new System.Drawing.Size(248, 28);
             this.textBox1.TabIndex = 60;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(926, 164);
+            this.label9.Location = new System.Drawing.Point(1034, 166);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(133, 20);
             this.label9.TabIndex = 59;
@@ -556,17 +558,17 @@
             // 
             this.textBox2.BackColor = System.Drawing.SystemColors.Menu;
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Location = new System.Drawing.Point(930, 122);
+            this.textBox2.Location = new System.Drawing.Point(1038, 128);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(311, 28);
+            this.textBox2.Size = new System.Drawing.Size(234, 28);
             this.textBox2.TabIndex = 58;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(926, 98);
+            this.label10.Location = new System.Drawing.Point(1034, 97);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(39, 20);
             this.label10.TabIndex = 57;
@@ -577,13 +579,39 @@
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(930, 242);
+            this.button2.Location = new System.Drawing.Point(768, 251);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(129, 22);
+            this.button2.Size = new System.Drawing.Size(129, 41);
             this.button2.TabIndex = 24;
             this.button2.Text = "REGISTRAR";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.ForeColor = System.Drawing.Color.White;
+            this.button7.Location = new System.Drawing.Point(1038, 251);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(129, 41);
+            this.button7.TabIndex = 61;
+            this.button7.Text = "ATUALIZAR";
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.ForeColor = System.Drawing.Color.White;
+            this.btnBuscar.Location = new System.Drawing.Point(903, 251);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(129, 41);
+            this.btnBuscar.TabIndex = 62;
+            this.btnBuscar.Text = "BUSCAR";
+            this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // Form2
             // 
@@ -591,6 +619,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1332, 674);
+            this.Controls.Add(this.btnBuscar);
+            this.Controls.Add(this.button7);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label9);
@@ -604,7 +634,7 @@
             this.Controls.Add(this.sideBar);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.txtMatricula);
+            this.Controls.Add(this.txtFormacao);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtNome);
@@ -671,7 +701,7 @@
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtMatricula;
+        private System.Windows.Forms.TextBox txtFormacao;
         private System.Windows.Forms.PictureBox btnHam;
         private System.Windows.Forms.Label UNIFENAS;
         private System.Windows.Forms.PictureBox pictureBox2;
@@ -683,5 +713,7 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button btnBuscar;
     }
 }
