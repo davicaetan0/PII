@@ -67,6 +67,31 @@ namespace PII
             Console.WriteLine(greeting);
         }
 
+        public async Task RegistrarFeedbackAsync(string tipo, string data, string matricula, string descricao)
+        {
+            await using var session = _driver.AsyncSession();
+            await session.ExecuteWriteAsync(
+                async tx =>
+                {
+                    var query = @"
+                CREATE (f:Feedback {
+                    Tipo: $tipo,
+                    Data: $data,
+                    Matricula: $matricula,
+                    Descricao: $descricao
+                })
+                RETURN f";
+                    await tx.RunAsync(query, new
+                    {
+                        tipo,
+                        data,
+                        matricula,
+                        descricao
+                    });
+                });
+        }
+
+
         public void Dispose()
         {
             _driver?.Dispose();
