@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using Neo4j.Driver;
 
 namespace PII
@@ -16,37 +18,36 @@ namespace PII
             _driver = GraphDatabase.Driver(uri, AuthTokens.Basic(user, password));
         }
 
-        public async Task RegistrarProfessorAsync(string nome, string endereco, string email, string formacao, string matricula, string dataNascimento, string cpf, string registroGeral)
+        public async Task RegistrarProfessorAsync(string nome, string endereco, string email, string formacao, string dataNascimento, string cpf, string registroGeral)
         {
             await using var session = _driver.AsyncSession();
             await session.ExecuteWriteAsync(
                 async tx =>
                 {
                     var query = @"
-                        CREATE (p:Professor {
-                            Nome: $nome,
-                            Endereco: $endereco,
-                            Email: $email,
-                            Formacao: $formacao,
-                            Matricula: $matricula,
-                            DataNascimento: $dataNascimento,
-                            CPF: $cpf,
-                            RegistroGeral: $registroGeral
-                        })
-                        RETURN p";
+                CREATE (p:Professor {
+                    Nome: $nome,
+                    Endereco: $endereco,
+                    Email: $email,
+                    Formacao: $formacao,
+                    DataNascimento: $dataNascimento,
+                    CPF: $cpf,
+                    RegistroGeral: $registroGeral
+                })
+                RETURN p";
                     await tx.RunAsync(query, new
                     {
                         nome,
                         endereco,
                         email,
                         formacao,
-                        matricula,
                         dataNascimento,
                         cpf,
                         registroGeral
                     });
                 });
         }
+
 
         public async Task PrintGreetingAsync(string message)
         {
@@ -175,6 +176,60 @@ namespace PII
                 return null; // Retorna null se o professor não for encontrado
             });
         }
+
+
+        public async Task<List<Dictionary<string, string>>> ListarProfessoresAsync()
+        {
+            await using var session = _driver.AsyncSession();
+            return await session.ExecuteReadAsync(async tx =>
+            {
+                var query = @"
+            MATCH (p:Professor)
+            RETURN p.Nome AS Nome, 
+                   p.Endereco AS Endereco, 
+                   p.Email AS Email, 
+                   p.Formacao AS Formacao, 
+                   p.DataNascimento AS DataNascimento, 
+                   p.CPF AS CPF, 
+                   p.RegistroGeral AS RegistroGeral";
+                var result = await tx.RunAsync(query);
+
+                var professores = new List<Dictionary<string, string>>();
+
+                while (await result.FetchAsync())
+                {
+                    var record = result.Current;
+                    professores.Add(new Dictionary<string, string>
+                    {
+                        ["Nome"] = record["Nome"].As<string>(),
+                        ["Endereco"] = record["Endereco"].As<string>(),
+                        ["Email"] = record["Email"].As<string>(),
+                        ["Formacao"] = record["Formacao"].As<string>(),
+                        ["DataNascimento"] = record["DataNascimento"].As<string>(),
+                        ["CPF"] = record["CPF"].As<string>(),
+                        ["RegistroGeral"] = record["RegistroGeral"].As<string>()
+                    });
+                }
+
+                return professores;
+            });
+        }
+
+        public async Task ExcluirProfessorAsync(string cpf)
+        {
+            await using var session = _driver.AsyncSession();
+            await session.ExecuteWriteAsync(
+                async tx =>
+                {
+                    var query = @"
+                MATCH (p:Professor {CPF: $cpf})
+                DELETE p";
+                    await tx.RunAsync(query, new { cpf });
+                });
+        }
+
+
+
 
 
         public void Dispose()

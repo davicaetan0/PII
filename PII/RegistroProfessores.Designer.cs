@@ -1,4 +1,7 @@
-﻿namespace PII
+﻿using System.Drawing;
+using System.Windows.Forms;
+
+namespace PII
 {
     partial class Form2
     {
@@ -31,6 +34,8 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Button button3;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtData = new System.Windows.Forms.TextBox();
             this.menuContainer = new System.Windows.Forms.FlowLayoutPanel();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -77,6 +82,8 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
+            this.ListarProfessor = new System.Windows.Forms.DataGridView();
+            this.buttonExcluir = new System.Windows.Forms.Button();
             button3 = new System.Windows.Forms.Button();
             this.menuContainer.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -92,6 +99,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnHam)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ListarProfessor)).BeginInit();
             this.SuspendLayout();
             // 
             // button3
@@ -613,12 +621,62 @@
             this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
+            // ListarProfessor
+            // 
+            this.ListarProfessor.AllowUserToAddRows = false;
+            this.ListarProfessor.AllowUserToDeleteRows = false;
+            this.ListarProfessor.AllowUserToResizeRows = false;
+            this.ListarProfessor.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.ListarProfessor.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ListarProfessor.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ListarProfessor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.ListarProfessor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.ListarProfessor.DefaultCellStyle = dataGridViewCellStyle6;
+            this.ListarProfessor.EnableHeadersVisualStyles = false;
+            this.ListarProfessor.GridColor = System.Drawing.Color.LightGray;
+            this.ListarProfessor.Location = new System.Drawing.Point(156, 372);
+            this.ListarProfessor.MultiSelect = false;
+            this.ListarProfessor.Name = "ListarProfessor";
+            this.ListarProfessor.RowHeadersVisible = false;
+            this.ListarProfessor.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.ListarProfessor.Size = new System.Drawing.Size(1176, 202);
+            this.ListarProfessor.TabIndex = 63;
+            // 
+            // buttonExcluir
+            // 
+            this.buttonExcluir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.buttonExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonExcluir.ForeColor = System.Drawing.Color.White;
+            this.buttonExcluir.Location = new System.Drawing.Point(1173, 251);
+            this.buttonExcluir.Name = "buttonExcluir";
+            this.buttonExcluir.Size = new System.Drawing.Size(129, 41);
+            this.buttonExcluir.TabIndex = 64;
+            this.buttonExcluir.Text = "EXCLUIR";
+            this.buttonExcluir.UseVisualStyleBackColor = false;
+            this.buttonExcluir.Click += new System.EventHandler(this.buttonExcluir_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1332, 674);
+            this.Controls.Add(this.buttonExcluir);
+            this.Controls.Add(this.ListarProfessor);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button2);
@@ -662,6 +720,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ListarProfessor)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -715,5 +774,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.DataGridView ListarProfessor;
+        private Button buttonExcluir;
     }
 }
