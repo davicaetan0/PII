@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -124,10 +125,26 @@ namespace PII
             menuTransition.Start();
         }
 
+        private string GerarSenha()
+        {
+            var random = new Random();
+            var senha = new StringBuilder();
+            const string caracteres = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+
+            for (int i = 0; i < 8; i++)  // Senha com 8 caracteres
+            {
+                senha.Append(caracteres[random.Next(caracteres.Length)]);
+            }
+
+            return senha.ToString();
+        }
+
+
         private void button7_Click(object sender, EventArgs e)
         {
             try
             {
+                // Coleta os dados do formulário
                 string nome = txtNome.Text.Trim();
                 string dataNascimentoStr = txtData.Text.Trim();
                 DateTime dataNascimento;
@@ -141,17 +158,57 @@ namespace PII
                 int idCurso = (int)comboBoxCurso.SelectedValue;
                 string endereco = txtEndereco.Text.Trim();
                 string email = txtEmail.Text.Trim();
-                string matricula = txtMatricula.Text.Trim();
+                string telefone = txtTelefone.Text.Trim();  // Pegando o telefone
+                string rg = txtRG.Text.Trim();  // Pegando o RG
 
-                conexao.InserirRegistro(nome, dataNascimento, idCurso, endereco, email, matricula);
+                // Pega a data da matrícula
+                string dataMatriculaStr = txtDataMatricula.Text.Trim();
+                DateTime dataMatricula;
 
-                MessageBox.Show("Registro inserido com sucesso!");
+                if (!DateTime.TryParse(dataMatriculaStr, out dataMatricula))
+                {
+                    MessageBox.Show("Data de matrícula inválida. Por favor, insira uma data válida.");
+                    return;
+                }
+
+                // Pega o CPF do campo de entrada
+                string cpf = txtCpf.Text.Trim();
+
+                // Gerar a senha aleatória
+                string senhaGerada = GerarSenha();
+
+                // Exibe a senha no popup
+                MessageBox.Show($"Senha gerada com sucesso! A senha para o aluno {nome} é: {senhaGerada}",
+                                 "Senha Gerada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                // Agora, insere o aluno e matrícula no banco com a senha gerada
+                conexao.InserirAlunoEMatricula(nome, dataNascimento, idCurso, endereco, email, telefone, rg, cpf, dataMatricula, senhaGerada);
+
+                // Limpa os campos após a inserção
+                LimparCampos();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro ao inserir registro: " + ex.Message);
+                MessageBox.Show("Erro ao inserir aluno e matrícula: " + ex.Message);
             }
         }
+
+        
+
+        
+        // Método para limpar os campos
+        private void LimparCampos()
+        {
+            txtNome.Clear();
+            txtData.Clear();
+            comboBoxCurso.SelectedIndex = -1;  // Limpa o ComboBox
+            txtEndereco.Clear();
+            txtEmail.Clear();
+            txtTelefone.Clear();
+            txtCpf.Clear();
+            txtDataMatricula.Clear();
+        }
+    
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -182,30 +239,30 @@ namespace PII
 
         private void ConfigurarEstiloDataGrid()
         {
-            
-                dataGridAlunos.EnableHeadersVisualStyles = false; // Permite a customização dos cabeçalhos
 
-                // Cor de fundo e fonte dos cabeçalhos
-                dataGridAlunos.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(0, 0, 0);
-                dataGridAlunos.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
-                dataGridAlunos.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 14, FontStyle.Bold);
+            dataGridAlunos.EnableHeadersVisualStyles = false; // Permite a customização dos cabeçalhos
 
-                // Estilo das células
-                dataGridAlunos.DefaultCellStyle.Font = new Font("Arial", 12);
-                dataGridAlunos.DefaultCellStyle.BackColor = Color.White;
-                dataGridAlunos.DefaultCellStyle.ForeColor = Color.Black;
-                dataGridAlunos.DefaultCellStyle.SelectionBackColor = Color.White;
-                dataGridAlunos.DefaultCellStyle.SelectionForeColor = Color.Black;
+            // Cor de fundo e fonte dos cabeçalhos
+            dataGridAlunos.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(0, 0, 0);
+            dataGridAlunos.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dataGridAlunos.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 14, FontStyle.Bold);
 
-                // Bordas e alinhamento
-                dataGridAlunos.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-                dataGridAlunos.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
-                dataGridAlunos.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            // Estilo das células
+            dataGridAlunos.DefaultCellStyle.Font = new Font("Arial", 12);
+            dataGridAlunos.DefaultCellStyle.BackColor = Color.White;
+            dataGridAlunos.DefaultCellStyle.ForeColor = Color.Black;
+            dataGridAlunos.DefaultCellStyle.SelectionBackColor = Color.White;
+            dataGridAlunos.DefaultCellStyle.SelectionForeColor = Color.Black;
 
-              
-            }
+            // Bordas e alinhamento
+            dataGridAlunos.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGridAlunos.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+            dataGridAlunos.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
-        
+
+        }
+
+
 
         private void panel8_Paint(object sender, PaintEventArgs e)
         {
@@ -369,8 +426,7 @@ namespace PII
 
         private void button9_Click(object sender, EventArgs e)
         {
-            Form3 reg3 = new Form3();
-            reg3.ShowDialog();
+
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -389,14 +445,10 @@ namespace PII
             reg.ShowDialog();
         }
 
-        private void button6_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -408,8 +460,64 @@ namespace PII
         {
 
         }
+
+        private void dataGridAlunos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void txtNome_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtEndereco_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtEmail_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtRG_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCpf_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menu_Click_1(object sender, EventArgs e)
+        {
+            menuTransition.Start();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            registro registro = new registro();
+            registro.ShowDialog();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            RegistroProfessores registro = new RegistroProfessores();
+            registro.ShowDialog();
+
+        }
+
+        private void button9_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            RegistrarCurso registrar = new RegistrarCurso();
+            registrar.ShowDialog();
+        }
     }
 }
-   
- 
 
